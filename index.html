@@ -1,1 +1,28 @@
-<h3>123</h3>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+        <meta name="keywords" content="&#x9879;&#x76EE;&#x5173;&#x952E;&#x8BCD;">
+        <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAgCAIAAAA+KKknAAADu0lEQVRYhd1ZS0gqURie0cQoUa66EENxUzDgIIEgqNADemGlBIFEkQUtItoVCC0qWkWLadEuKnIRFtFj1XPEgmrRQ+y1FBlwxNQKU2pImLu43GFwbC7hGS70rc7/8/1zvo9zzpxzZmCapqGfCNH/FiAUyoR4aCwWs1qt+XxepVJptVqDwYCiqNlsRhBELpcL0SMXsEBTsbm5+erqqiApFostFktDQ0NLS4vRaBSiXwZCGVtfXx8eHuYhaLXakZGRvr4+mUwmhACh1hhBEPwEkiQnJiaMRmMgEBBCgFDGTk9P2eHCwkJ/f391dXUBLZPJdHd3z83NARcgyFQkCKK2tpb95Ofn5z+NRCIRDAb9fv/JyQm7ZGhoaHZ2FqQIWgDMz8//YgFBEC5nZWVFqVSyaTMzMwA1CDIVNzc32aHD4eByPB5PT08PO4Nh2PX1NSgN4I0Fg8GHhwd2xuVyFWWOjo6yQ5qmMQwDJQO8Mb/fzw6bmppsNltRZk1NTUEGx/F8Pg9EBmBj2Wx2e3ubCWEY5nklvLy8FGQoiopEIkCUADa2tbX1+fnJhG6322AwfEUOhULcZDQaBaIEsLGNjQ2mLZFIxsfHechLS0vcZEVFBRAlII3FYrGLiwsmdDqdPMN1f3+/v79fkNRoNFarFYgYkMb29vbov5uyXC6fnJzkIU9PT9Ocs4Hb7RaJwEgCeW3Z3d1l2haLpaqqqijt7u7O5/PhOF6Qh2F4YGAAlBhgxpLJ5Pn5ORP29vZyOR8fH4uLi1NTU9yxgiCotbVVp9OB0gPM2NHRESNXLBZ3dHQUELLZbFtbWyQSKeoKhmGv1wtKDATQ2NraGtNm77zxePzg4ODy8vLp6QlFUb1ef3Z2lslkCso9Hg+KoqDEQACNhcNhpu1wOAKBgEajyeVyLpfr/f29srJSIpG8vr4WrW1vbwd8tAd1bUmn0+y7llqtTqVSUqlUpVKl02mKonhqjUbj4eFheXl56TLYKHXE4vF4WVlZIpFgJ1OpFARBFEWRJMlT29XVZTabefa6UlCSseXlZZ/Pd3t7+91CtVrtdDq9Xm84HDaZTMCHCypxg45Go991pdPpVldXHx8f6+vrSZJsbGxUqVSlaPgKpa6xwcHBnZ0dfo5UKkUQxGQyKRSKsbExmUxGEIRery+l33+iVGOhUKizszOXy31FqKurwzDsz0LKZrMCfWzjAsBbMZlMHh8f39zcvL29KRQKpVIpEolwHJdIJDabzW632+12IFq/BaE+mP53/NifEj/W2G9rTBZ8UmJcwgAAAABJRU5ErkJggnJlc291cmNlKDIpIG9mIHR5cGUgKGdkKQo=">
+        <link rel="stylesheet" type="text/css" href="index-style.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div id="time"></div>
+            <div id="caculateTime"></div>
+        </div>
+        <script src="timeTool.js"></script>
+        <script>
+            window.onload = function() {
+                $("time").innerHTML = showTime(0, "-");
+                $("caculateTime").innerHTML = timeDiff("2000/1/1", "2020/5/10");
+                function $(params) {
+                    return document.getElementById(params);
+                }
+            }
+        </script>
+    </body>
+</html>

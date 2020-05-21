@@ -23,15 +23,15 @@
                         <input type="text" id="tarMonth" placeholder="12">月
                         <input type="text" id="tarDay" placeholder="22">日
                         <button id="caTimeBtn">确定</button>
+                        <button id="caClearBtn">清空</button>
                     </div>
-                </div>
-                <br/>
-                <div>
-                    <li id="caDay"></li>
-                    <li id="caHour"></li>
-                    <li id="caMin"></li>
-                    <li id="caSec"></li>
-                    <li id="caMs"></li>
+                    <div class="calculate-result">
+                        <li id="caDay"></li>
+                        <li id="caHour"></li>
+                        <li id="caMin"></li>
+                        <li id="caSec"></li>
+                        <li id="caMs"></li>
+                    </div>
                 </div>
                 <!-- 左侧菜单 -->
                 <img class="side-menu-switch" src="icon-menu.png" alt="">
@@ -45,12 +45,26 @@
             window.onload = function() {
                 // 计算时间差
                 $("caTimeBtn").onclick = function() {
-                    $("tarYear").value||($("tarYear").value = 2020); //设置缺省值
-                    $("tarMonth").value||($("tarMonth").value = 12);
-                    $("tarDay").value||($("tarDay").value = 22);
-                    let timeTarget = caculateTime($("tarYear").value.toString() + "-" + $("tarMonth").value.toString()  + "-" + $("tarDay").value.toString()),
-                        timeDiffArr = [$("caMs"), $("caSec"), $("caMin"), $("caHour"), $("caDay")];
-                    timeDiffArr.forEach((item, index)=> {item.innerHTML = timeTarget[index]});
+                    var year = $("tarYear"),
+                        month = $("tarMonth"),
+                        day = $("tarDay"),
+                        timeDiffArr = [$("caMs"), $("caSec"), $("caMin"), $("caHour"), $("caDay")],
+                        timeTarget = [];
+                    // 校验&设置缺省值
+                    year.value||(year.value = 2020);
+                    month.value||(month.value = 12);
+                    day.value||(day.value = 22);
+                    // 计算
+                    var setTime = setInterval(() => {
+                        timeTarget = caculateTime(year.value.toString() + "-" + month.value.toString() + "-" + day.value.toString());
+                        timeDiffArr.forEach((item, index)=> {item.innerHTML = timeTarget[index]});
+                    }, 128);
+                    // 清空
+                    $("caClearBtn").onclick = function() {
+                        clearInterval(setTime); // 删除定时器
+                        year.value = month.value = day.value = ""; // 清空表单
+                        timeDiffArr.forEach((item, index)=> {item.innerHTML = ""}); // 清空结果
+                    };
                 };
                 // 菜单动画
                 var menuNode = elementsByClassName(document, "side-menu")[0],

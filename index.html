@@ -22,7 +22,6 @@
                 <div id="part1" class="content">
                     <div class="timer-content">
                         <div class="title-box">
-                            <div class="title">刀刀の个人空间</div>
                             <div id="time" class="time"></div>
                             <div class="calculation">
                                 距离
@@ -60,6 +59,16 @@
                         </ul>
                     </div>
                 </div>
+                <!-- 赞助 -->
+                <img class="icon-alipay" src="icon-qrcode.png" alt="来打钱鸭~">
+                <div class="alipay-dialog">
+                    <div class="dialog-title">
+                        <div class="title-info">支付宝二维码</div>
+                        <div class="icon-close">X</div>
+                    </div>
+                    <img class="alipay-code" src="alipay.jpg" alt="来打钱鸭~">
+                </div>
+                <div class="mask"></div>
             </div>
         </div>
         <script src="timeTool.js"></script>
@@ -120,6 +129,19 @@
                 home.onclick = function() {
                     indexCont.style.display = "inline";
                     partCont.forEach((j)=> {j.style.display = "none"});
+                }
+                
+                var alipay = elementsByClassName(document, "icon-alipay")[0],
+                    close = elementsByClassName(document, "icon-close")[0],
+                    mask = elementsByClassName(document, "mask")[0],
+                    alipayDialog = elementsByClassName(document, "alipay-dialog")[0];
+                close.onclick = function() {
+                    alipayDialog.style.display = "none";
+                    mask.style.display = "none";
+                }
+                alipay.onclick = function() {
+                    alipayDialog.style.display = "inline-block";
+                    mask.style.display = "inline-block";
                 }
                 // 当前时间
                 $("time").innerHTML = showTime(0, "");

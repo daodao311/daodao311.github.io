@@ -117,7 +117,7 @@
         "End of dialog window.": "结束对话视窗"
       });
 
-      Video.options.flash.swf = '../assets/video-js.swf';
+      Video.options.flash.swf = './video-js.swf';
       console.log('进入');
       // 初始化视频，设为全局变量
       this.myPlayer = Video('rtmpVideo', {
@@ -137,12 +137,12 @@
           }]
       }, function () {
           console.log("--------------成功初始化视频--------------");
-          this.myPlayer.one("playing", function () {         // 监听播放
-              console.log("开始播放");
-          });
-          this.myPlayer.one("error", function (error) {      // 监听错误
-              console.error("监听到异常，错误信息：%o",error);
-          });
+          // this.myPlayer.one("playing", function () {         // 监听播放
+          //     console.log("开始播放");
+          // });
+          // this.myPlayer.one("error", function (error) {      // 监听错误
+          //     console.error("监听到异常，错误信息：%o",error);
+          // });
       });
     },
     destroyed() {

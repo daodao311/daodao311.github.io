@@ -115,28 +115,28 @@
 		console.log('进入');
 		 // 初始化视频，设为全局变量
 		var myPlayer = videojs('rtmpVideo', {
-				autoplay: true,
-				controls: true,//控制条
+			autoplay: true,
+			controls: true,//控制条
 
-				muted: true,// 静音
-				preload: "auto",// 预加载
-				language: "zh-CN",// 初始化语言
-				playbackRates: [1, 2, 3, 4, 5, 8, 10, 20],// 播放速度
-				'techOrder': ['flash'],
-		
-				sources: [{
-							/*rtmp://live.hkstv.hk.lxdns.com/live/hks*/
-					src: 'rtmp://www.uav-space.com/vod2/uspace3.mp4',   //这里设置你的播放资源，
-					type: 'rtmp/flv'
-				}]
+			muted: true,// 静音
+			preload: "auto",// 预加载
+			language: "zh-CN",// 初始化语言
+			playbackRates: [1, 2, 3, 4, 5, 8, 10, 20],// 播放速度
+			'techOrder': ['flash'],
+	
+			sources: [{
+						/*rtmp://live.hkstv.hk.lxdns.com/live/hks*/
+				src: 'rtmp://www.uav-space.com/vod2/uspace3.mp4',   //这里设置你的播放资源，
+				type: 'rtmp/flv'
+			}]
 		}, function () {
-				console.log("--------------成功初始化视频--------------");
-				myPlayer.one("playing", function () {         // 监听播放
-						console.log("开始播放");
-				});
-				myPlayer.one("error", function (error) {      // 监听错误
-						console.error("监听到异常，错误信息：%o",error);
-				});
+			console.log("--------------成功初始化视频--------------");
+			myPlayer.one("playing", function () {         // 监听播放
+					console.log("开始播放");
+			});
+			myPlayer.one("error", function (error) {      // 监听错误
+					console.error("监听到异常，错误信息：%o",error);
+			});
 		});
 	</script>
 </body>

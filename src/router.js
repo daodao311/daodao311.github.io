@@ -25,7 +25,7 @@ Vue.use(Router);
 const index = ()=> import('./view/index');
 
 const router = new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',

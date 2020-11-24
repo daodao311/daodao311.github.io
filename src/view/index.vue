@@ -1,31 +1,14 @@
 <template>
 	<div class="m">
-    <button @click="toTV">湖南台</button>
-    <!-- <button @click="toTest">RTMP演示</button> -->
-    <div v-if="tab === 1">
-      <video
-        id="rtmpHunan"
-        class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
-        controls
-        autoplay="true"
-        preload="auto"
-        width="640"
-        height="264"
-        data-setup='{ "html5" : { "nativeTextTracks" : false } }'
-      ></video>
-    </div>
-    <!-- <div v-if="tab === 2">
-      <video
-        id="rtmpVideo"
-        class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
-        controls
-        autoplay="true"
-        preload="auto"
-        width="640"
-        height="264"
-        data-setup='{ "html5" : { "nativeTextTracks" : false } }'
-      ></video>
-    </div> -->
+    <video
+      id="rtmpHunan"
+      class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
+      controls
+      autoplay="true"
+      preload="auto"
+      width="640"
+      height="264"
+    ></video>
 	</div>
 </template>
 
@@ -44,12 +27,10 @@
       return {
         myPlayer: '',
         rtmpUrl: '',
-        tab: 1,
       }
     },
     methods: {
       toTV() {
-        this.tab = 1;
         // !!this.myPlayer && this.myPlayer.dispose()
         // 获取视频url
         this.$axios({
@@ -57,19 +38,11 @@
           method: 'post',
         }).then( res => {
           this.rtmpUrl = res.data.rtmpUrl;
-          this.setVideo();
-          this.videoInit('rtmpHunan');
+          this.videoInit();
         })
       },
-      toTest() {
-        this.tab = 2;
-        // !!this.myPlayer && this.myPlayer.dispose()
-        this.rtmpUrl = 'rtmp://www.uav-space.com/vod2/uspace3.mp4';
-        this.setVideo();
-        this.videoInit('rtmpVideo');
-      },
-      // 视频配置
-      setVideo() {
+      // 视频初始化
+      videoInit() {
         //设置中文
         Video.addLanguage('zh-CN', {
           "Play": "播放",
@@ -156,11 +129,8 @@
         });
         // 设置flash路径,用于在videojs发现浏览器不支持HTML5播放器的时候自动唤起flash播放器
         Video.options.flash.swf = './video-js.swf';
-      },
-      // 视频初始化
-      videoInit(videoId) {
         // 初始化视频，设为全局变量
-        this.myPlayer = Video(videoId, {
+        this.myPlayer = Video('rtmpHunan', {
           autoplay: true,
           controls: true,//控制条
 
@@ -171,9 +141,8 @@
           techOrder: ['flash'],
       
           sources: [{
-                /*rtmp://live.hkstv.hk.lxdns.com/live/hks*/
             src: this.rtmpUrl,   //这里设置你的播放资源，
-            type: 'rtmp/flv'
+            // type: 'rtmp/flv'
           }]
         }, () => {
             console.log("成功初始化视频" + this.rtmpUrl);
@@ -188,6 +157,12 @@
     },
     mounted() {
       this.toTV();
+      window.addEventListener("beforeunload", (e) => {
+        // Cancel the event
+        e.preventDefault();
+        // Chrome requires returnValue to be set
+        // e.returnValue = "hello";
+      });
     },
     destroyed() {
       this.myPlayer.dispose()

@@ -38,7 +38,6 @@
           method: 'post',
         }).then( res => {
           this.rtmpUrl = res.data.rtmpUrl;
-          console.log(this.rtmpUrl === 'rtmp://www.uav-space.com/vod2/uspace3.mp4');
           this.videoInit();
         })
       },

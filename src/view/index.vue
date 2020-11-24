@@ -30,7 +30,7 @@
       }
     },
     methods: {
-      toTV() {
+      getVideoUrl() {
         // !!this.myPlayer && this.myPlayer.dispose()
         // 获取视频url
         this.$axios({
@@ -142,7 +142,7 @@
       
           sources: [{
             src: this.rtmpUrl,   //这里设置你的播放资源，
-            // type: 'rtmp/flv'
+            type: 'rtmp/flv'
           }]
         }, () => {
             console.log("成功初始化视频" + this.rtmpUrl);
@@ -156,7 +156,7 @@
       }
     },
     mounted() {
-      this.toTV();
+      this.getVideoUrl();
       window.addEventListener("beforeunload", (e) => {
         // Cancel the event
         e.preventDefault();

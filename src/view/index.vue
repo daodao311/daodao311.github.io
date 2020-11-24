@@ -1,15 +1,31 @@
 <template>
 	<div class="m">
-		<video
-      id="rtmpVideo"
-      class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
-      controls
-      autoplay="true"
-      preload="auto"
-      width="640"
-      height="264"
-      data-setup='{ "html5" : { "nativeTextTracks" : false } }'
-		></video>
+    <button @click="toTV">湖南台</button>
+    <!-- <button @click="toTest">RTMP演示</button> -->
+    <div v-if="tab === 1">
+      <video
+        id="rtmpHunan"
+        class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
+        controls
+        autoplay="true"
+        preload="auto"
+        width="640"
+        height="264"
+        data-setup='{ "html5" : { "nativeTextTracks" : false } }'
+      ></video>
+    </div>
+    <!-- <div v-if="tab === 2">
+      <video
+        id="rtmpVideo"
+        class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
+        controls
+        autoplay="true"
+        preload="auto"
+        width="640"
+        height="264"
+        data-setup='{ "html5" : { "nativeTextTracks" : false } }'
+      ></video>
+    </div> -->
 	</div>
 </template>
 
@@ -21,28 +37,39 @@
 <script>
   import Video from 'video.js'
   import 'video.js/dist/video-js.css'
-  import 'videojs-flash'  //在我们要使用的文件中导入就行
+  import 'videojs-flash'
   export default {
     name: 'home',
     data () {
       return {
         myPlayer: '',
         rtmpUrl: '',
+        tab: 1,
       }
     },
     methods: {
-      // 获取视频url
-      getUrl() {
+      toTV() {
+        this.tab = 1;
+        // !!this.myPlayer && this.myPlayer.dispose()
+        // 获取视频url
         this.$axios({
           url: 'http://rap2api.taobao.org/app/mock/271520/rtmp',
           method: 'post',
         }).then( res => {
           this.rtmpUrl = res.data.rtmpUrl;
-          this.videoInit();
+          this.setVideo();
+          this.videoInit('rtmpHunan');
         })
       },
-      // 视频初始化
-      videoInit() {
+      toTest() {
+        this.tab = 2;
+        // !!this.myPlayer && this.myPlayer.dispose()
+        this.rtmpUrl = 'rtmp://www.uav-space.com/vod2/uspace3.mp4';
+        this.setVideo();
+        this.videoInit('rtmpVideo');
+      },
+      // 视频配置
+      setVideo() {
         //设置中文
         Video.addLanguage('zh-CN', {
           "Play": "播放",
@@ -129,9 +156,11 @@
         });
         // 设置flash路径,用于在videojs发现浏览器不支持HTML5播放器的时候自动唤起flash播放器
         Video.options.flash.swf = './video-js.swf';
+      },
+      // 视频初始化
+      videoInit(videoId) {
         // 初始化视频，设为全局变量
-        console.log(this.rtmpUrl);
-        this.myPlayer = Video('rtmpVideo', {
+        this.myPlayer = Video(videoId, {
           autoplay: true,
           controls: true,//控制条
 
@@ -146,8 +175,8 @@
             src: this.rtmpUrl,   //这里设置你的播放资源，
             type: 'rtmp/flv'
           }]
-        }, function () {
-            console.log("--------------成功初始化视频--------------");
+        }, () => {
+            console.log("成功初始化视频" + this.rtmpUrl);
             // this.myPlayer.one("playing", function () {         // 监听播放
             //     console.log("开始播放");
             // });
@@ -158,7 +187,7 @@
       }
     },
     mounted() {
-      this.getUrl();
+      this.toTV();
     },
     destroyed() {
       this.myPlayer.dispose()

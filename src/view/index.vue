@@ -4,6 +4,7 @@
       id="rtmpVideo"
       class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid"
       controls
+      autoplay="true"
       preload="auto"
       width="640"
       height="264"
@@ -116,25 +117,24 @@
         "Beginning of dialog window. Escape will cancel and close the window.": "开始对话视窗。离开会取消及关闭视窗",
         "End of dialog window.": "结束对话视窗"
       });
-
+      // 设置flash路径,用于在videojs发现浏览器不支持HTML5播放器的时候自动唤起flash播放器
       Video.options.flash.swf = './video-js.swf';
-      console.log('进入');
       // 初始化视频，设为全局变量
       this.myPlayer = Video('rtmpVideo', {
-          autoplay: true,
-          controls: true,//控制条
+        autoplay: true,
+        controls: true,//控制条
 
-          muted: true,// 静音
-          preload: "auto",// 预加载
-          language: "zh-CN",// 初始化语言
-          playbackRates: [1, 2, 3, 4, 5, 8, 10, 20],// 播放速度
-          'techOrder': ['flash'],
-      
-          sources: [{
-                /*rtmp://live.hkstv.hk.lxdns.com/live/hks*/
-            src: 'rtmp://www.uav-space.com/vod2/uspace3.mp4',   //这里设置你的播放资源，
-            type: 'rtmp/flv'
-          }]
+        muted: true,// 静音
+        preload: "auto",// 预加载
+        language: "zh-CN",// 初始化语言
+        playbackRates: [1, 2, 3, 4, 5, 8, 10, 20],// 播放速度
+        techOrder: ['flash'],
+    
+        sources: [{
+              /*rtmp://live.hkstv.hk.lxdns.com/live/hks*/
+          src: 'rtmp://www.uav-space.com/vod2/uspace3.mp4',   //这里设置你的播放资源，
+          type: 'rtmp/flv'
+        }]
       }, function () {
           console.log("--------------成功初始化视频--------------");
           // this.myPlayer.one("playing", function () {         // 监听播放

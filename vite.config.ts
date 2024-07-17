@@ -13,7 +13,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: "my-sharing"
+    outDir: "docs"
   },
   css: {
     preprocessorOptions: {

@@ -1,27 +1,5 @@
-# 刀刀的个人空间
-```
-https://daodaoz.xyz/
-```
+# Vue 3 + TypeScript + Vite
 
-## 项目安装
-```
-npm install
-```
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-### 开发编译与重新加载
-```
-npm run serve
-```
-
-### 生产构建打包
-```
-npm run build
-```
-
-### 检测与修复
-```
-npm run lint
-```
-
-### 自定义设置
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).

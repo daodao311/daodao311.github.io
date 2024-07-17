@@ -1,0 +1,36 @@
+/* 全局css变量 */
+$--color-primary: #ffc5c5;
+$--color-primary-light: #ffebd8;
+$--color-primary-background: #fef2ee;
+$--color-nature: #89b9ad;
+$--color-nature-light: #c7dca7;
+$--color-nature-background: #f7feee;
+$--color-success: #56b782;
+$--color-warning: #ffb728;
+$--color-error: #eb8282; // f06060
+$--color-purple: #90a8fc;
+$--color-white: white;
+/* 内容文案 */
+$--color-text1: #152038;
+$--color-text2: #444d60;
+$--color-text3: #737988;
+$--color-text4: #a2a6af;
+$--color-text5: #e3e5e7;
+
+$--color-background1: #edeeef;
+$--color-background2: #f1f2f3;
+$--color-background3: #f6f6f7;
+$--color-background4: #fafbfb;
+
+$--color-border1: #edeeef;
+$--color-border2: #f1f2f3;
+$--color-border3: #f6f6f7;
+
+$--font-family: ZCOOL Wenyi;
+$--font-family-title: ZCOOL Kuaile;
+$--font-family-special: ZCOOL Xiaowei Logo;
+
+$--size-mini: clamp(16px, 13.1830985915px + 0.1233802817vw, 20px);
+$--size-small: clamp(18px, 17.2957746479px + 0.1408450704vw, 24px);
+$--size-normal: clamp(26px, 15.4366197183px + 2.1126760563vw, 56px);
+$--size-large: clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);

@@ -5,7 +5,7 @@
       "titleEN": "Gamma",
       "titleCN": "PPT生成器",
       "site": "https://gamma.app/",
-      "description": "PPT生成器",
+      "description": "一个PPT与网站生成器。",
       "image": "",
       "labels": [
         "工具"
@@ -16,7 +16,7 @@
       "titleEN": "Illuminarty",
       "titleCN": "AI绘画鉴别器",
       "site": "https://illuminarty.ai/en/",
-      "description": "AI绘画鉴别器",
+      "description": "一个可以鉴别图片是否是AI绘画的网站。",
       "image": "",
       "labels": [
         "趣味",
@@ -28,7 +28,7 @@
       "titleEN": "Suno",
       "titleCN": "AI音乐生成器",
       "site": "https://suno.com/",
-      "description": "AI音乐生成器",
+      "description": "按个人喜好AI生成自己想要的音乐。",
       "image": "",
       "labels": [
         "趣味",
@@ -40,7 +40,7 @@
       "titleEN": "Calligrapher",
       "titleCN": "签名生成器",
       "site": "https://www.calligrapher.ai/",
-      "description": "签名生成器",
+      "description": "一个生成英文签名字体的网站。（暂不支持中文）",
       "image": "",
       "labels": [
         "趣味",
@@ -52,14 +52,82 @@
       "titleEN": "Hong Hong",
       "titleCN": "哄哄模拟器",
       "site": "https://hong.greatdk.com/",
-      "description": "哄哄模拟器",
+      "description": "锻炼你的哄人技巧。",
       "image": "",
       "labels": [
         "趣味"
       ]
+    },
+    {
+      "name": "Dashtoon",
+      "titleEN": "Dashtoon",
+      "titleCN": "漫画生成器",
+      "site": "https://dashtoon.com/",
+      "description": "一键AI生成你想要的漫画。",
+      "image": "",
+      "labels": [
+        "趣味"
+      ]
+    },
+    {
+      "name": "Anitabi",
+      "titleEN": "Anitabi",
+      "titleCN": "ACG圣地巡礼地图",
+      "site": "https://anitabi.cn/map",
+      "description": "各个ACG作品（包括《甄嬛传》doge）的全球范围地图坐标",
+      "image": "",
+      "labels": [
+        "趣味",
+        "地图"
+      ]
+    },
+    {
+      "name": "Heygen",
+      "titleEN": "Heygen",
+      "titleCN": "AI视频生成",
+      "site": "https://chat.openai.com/g/g-wsOJ8RMTv-heygen",
+      "description": "AI生成人物演说视频",
+      "image": "",
+      "labels": [
+        "视频"
+      ]
+    },
+    {
+      "name": "Pixso AI",
+      "titleEN": "Pixso AI",
+      "titleCN": "AI生图、设计工具",
+      "site": "https://pixso.cn/pixso-ai-generator/",
+      "description": "支持AI生图、图标生成、语言大师、灵感专家、 AI生成设计规范、AI设计元素检查清单等， 解锁未来产品设计新方式。",
+      "image": "",
+      "labels": [
+        "图片",
+        "工具"
+      ]
+    },
+    {
+      "name": "Jazz vs Waffles",
+      "titleEN": "Jazz vs Waffles",
+      "titleCN": "爵士乐大战华夫饼",
+      "site": "https://www.jazzvswaffles.com/",
+      "description": "生成两个任意你想要的事物，强行对战！",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
+    },
+    {
+      "name": "Slow Roads",
+      "titleEN": "Slow Roads",
+      "titleCN": "无尽道路",
+      "site": "https://slowroads.io/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
     }
   ],
-  "tool": [
+  "work": [
     {
       "name": "CSS可视化",
       "titleEN": "CSS Visualization",
@@ -68,7 +136,29 @@
       "description": "",
       "image": "",
       "labels": [
-        "css"
+        "CSS"
+      ]
+    },
+    {
+      "name": "Awwwards",
+      "titleEN": "Awwwards",
+      "titleCN": "高级网站设计作品精选",
+      "site": "https://www.awwwards.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "设计"
+      ]
+    },
+    {
+      "name": "Encycolorpedia",
+      "titleEN": "Encycolorpedia",
+      "titleCN": "网页颜色识别",
+      "site": "https://encycolorpedia.cn/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "CSS"
       ]
     },
     {
@@ -94,36 +184,153 @@
       ]
     },
     {
-      "name": "Pc Moe",
-      "titleEN": "Pc Moe",
-      "titleCN": "与熊论道/熊曰加密",
-      "site": "http://hi.pcmoe.net/",
-      "description": "",
+      "name": "Logo SC",
+      "titleEN": "Logo SC",
+      "titleCN": "标小智",
+      "site": "https://www.logosc.cn/",
+      "description": "LOGO生成器",
       "image": "",
       "labels": [
-        "加密"
+        "图片"
       ]
     },
     {
-      "name": "Pc Moe",
-      "titleEN": "Pc Moe",
-      "titleCN": "与熊论道/熊曰加密",
-      "site": "http://hi.pcmoe.net/",
+      "name": "Green Sock",
+      "titleEN": "Green Sock",
+      "titleCN": "GSAP动画框架",
+      "site": "https://greensock.com/",
       "description": "",
       "image": "",
       "labels": [
-        "加密"
+        "动画",
+        "框架"
       ]
     },
     {
-      "name": "Pc Moe",
-      "titleEN": "Pc Moe",
-      "titleCN": "与熊论道/熊曰加密",
-      "site": "http://hi.pcmoe.net/",
+      "name": "Lottie",
+      "titleEN": "Lottie",
+      "titleCN": "Lottie移动应用动画效果框架",
+      "site": "https://airbnb.io/lottie/#/",
       "description": "",
       "image": "",
       "labels": [
-        "加密"
+        "动画",
+        "框架"
+      ]
+    },
+    {
+      "name": "Lottielab",
+      "titleEN": "Lottielab",
+      "titleCN": "Lottie动画创建和导出工具",
+      "site": "https://www.lottielab.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "动画"
+      ]
+    },
+    {
+      "name": "Processing",
+      "titleEN": "Processing",
+      "titleCN": "图像处理框架语言",
+      "site": "https://www.lottielab.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "动画",
+        "框架"
+      ]
+    },
+    {
+      "name": "Matter.js",
+      "titleEN": "Matter.js",
+      "titleCN": "2D物理引擎",
+      "site": "https://brm.io/matter-js/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "动画",
+        "框架"
+      ]
+    },
+    {
+      "name": "三维推",
+      "titleEN": "3wt",
+      "titleCN": "三维推",
+      "site": "https://3wt.cn/",
+      "description": "短连接与二维码生成，免费的网络营销工具。",
+      "image": "",
+      "labels": [
+        "动画",
+        "框架"
+      ]
+    },
+    {
+      "name": "Pexels",
+      "titleEN": "Pexels",
+      "titleCN": "可商用图片分享",
+      "site": "https://www.pexels.com/zh-cn/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "图片"
+      ]
+    },
+    {
+      "name": "AirPortal",
+      "titleEN": "AirPortal",
+      "titleCN": "空投",
+      "site": "https://airportal.cn/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "图片"
+      ]
+    },
+    {
+      "name": "Hanabi",
+      "titleEN": "Hanabi",
+      "titleCN": "数据图表视频生成",
+      "site": "https://hanabi.cn/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "图片",
+        "动画"
+      ]
+    },
+    {
+      "name": "CreativeMass",
+      "titleEN": "CreativeMass",
+      "titleCN": "创意导航",
+      "site": "https://creativemass.cn/",
+      "description": "你的灵感来源",
+      "image": "",
+      "labels": [
+        "创意",
+        "设计"
+      ]
+    },
+    {
+      "name": "Dribbble",
+      "titleEN": "Dribbble",
+      "titleCN": "设计交流网站",
+      "site": "https://dribbble.com/",
+      "description": "作品在线服务作品的交流网站。",
+      "image": "",
+      "labels": [
+        "设计"
+      ]
+    },
+    {
+      "name": "中国色",
+      "titleEN": "Chinese Colors",
+      "titleCN": "AI中国色",
+      "site": "https://www.zhongguose.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "设计"
       ]
     }
   ],
@@ -136,7 +343,7 @@
       "description": "",
       "image": "",
       "labels": [
-        "生活"
+        "娱乐"
       ]
     },
     {
@@ -147,7 +354,111 @@
       "description": "",
       "image": "",
       "labels": [
-        "生活"
+        "工具"
+      ]
+    },
+    {
+      "name": "Giphy",
+      "titleEN": "Giphy",
+      "titleCN": "GIF图片搜索",
+      "site": "https://giphy.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "图片"
+      ]
+    },
+    {
+      "name": "Airpano",
+      "titleEN": "Airpano",
+      "titleCN": "云旅游",
+      "site": "https://www.airpano.com/",
+      "description": "全景航拍及高清全景图、全景视频拍摄",
+      "image": "",
+      "labels": [
+        "生活",
+        "图片",
+        "视频"
+      ]
+    },
+    {
+      "name": "叔叔不约",
+      "titleEN": "shushubuyue",
+      "titleCN": "叔叔不约-匿名聊天室",
+      "site": "https://www.shushubuyue.net/",
+      "description": "在线匿名聊天室",
+      "image": "",
+      "labels": [
+        "生活",
+        "社交"
+      ]
+    },
+    {
+      "name": "Listen 1",
+      "titleEN": "Listen 1",
+      "titleCN": "音乐全平台搜索",
+      "site": "https://www.shushubuyue.net/",
+      "description": "One for all free music in China",
+      "image": "",
+      "labels": [
+        "音乐",
+        "工具"
+      ]
+    },
+    {
+      "name": "wikiHow",
+      "titleEN": "wikiHow",
+      "titleCN": "万事指南",
+      "site": "https://zh.wikihow.com/",
+      "description": "你可以信赖的万事指南。",
+      "image": "",
+      "labels": [
+        "生活",
+        "学习"
+      ]
+    },
+    {
+      "name": "Productivity",
+      "titleEN": "Productivity",
+      "titleCN": "快捷键分享",
+      "site": "https://productivity.so/",
+      "description": "一个专注于分享快捷键操作技巧的在线平台。",
+      "image": "",
+      "labels": [
+        "学习"
+      ]
+    },
+    {
+      "name": "temp-mail",
+      "titleEN": "temp-mail",
+      "titleCN": "临时电子邮件",
+      "site": "https://temp-mail.org/",
+      "description": "不用再担心垃圾邮件，广告邮件，黑客和机器人攻击。让您真实的邮箱保持干净和安全。Temp Mail提供临时、安全、匿名、免费的一次性电子邮件地址。",
+      "image": "",
+      "labels": [
+        "学习"
+      ]
+    },
+    {
+      "name": "Zoom Earth",
+      "titleEN": "Zoom Earth",
+      "titleCN": "实时气象卫星图片",
+      "site": "https://zoom.earth/",
+      "description": "实时气象卫星图片，实时风暴跟踪器。",
+      "image": "",
+      "labels": [
+        "地图"
+      ]
+    },
+    {
+      "name": "deviantART",
+      "titleEN": "deviantART",
+      "titleCN": "艺术创作社区",
+      "site": "https://www.deviantart.com/",
+      "description": "一个展示与分享各类艺术创作的大型国际性社群网站。",
+      "image": "",
+      "labels": [
+        "图片"
       ]
     }
   ],
@@ -186,14 +497,114 @@
       ]
     },
     {
-      "name": "Giphy",
-      "titleEN": "Giphy",
-      "titleCN": "GIF图片搜索",
-      "site": "https://giphy.com/",
+      "name": "Virtual Mauritshuis",
+      "titleEN": "Virtual Mauritshuis",
+      "titleCN": "虚拟博物馆",
+      "site": "https://virtual.mauritshuis.nl/",
       "description": "",
       "image": "",
       "labels": [
-        "图片"
+        "趣味"
+      ]
+    },
+    {
+      "name": "tree.fm",
+      "titleEN": "tree.fm",
+      "titleCN": "森林之声",
+      "site": "https: //www.tree.fm/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "音乐"
+      ]
+    },
+    {
+      "name": "Aporee",
+      "titleEN": "Aporee",
+      "titleCN": "世界之声",
+      "site": "https://aporee.org/maps/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "音乐"
+      ]
+    },
+    {
+      "name": "有趣网址之家",
+      "titleEN": "Youqu Home",
+      "titleCN": "有趣网址之家",
+      "site": "https://youquhome.com/",
+      "description": "有趣网址之家 - 收藏全球最有趣的网站",
+      "image": "",
+      "labels": [
+        "游戏",
+        "合集"
+      ]
+    },
+    {
+      "name": "Geoguessr",
+      "titleEN": "Geoguessr",
+      "titleCN": "猜地点",
+      "site": "https://www.geoguessr.com/",
+      "description": "",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
+    },
+    {
+      "name": "Maxwellcat World",
+      "titleEN": "Maxwellcat World",
+      "titleCN": "臭猫世界",
+      "site": "https://maxwellcat.world/",
+      "description": "网站可以与世界各地匿名网友一起抓老鼠。",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
+    },
+    {
+      "name": "Water Effect",
+      "titleEN": "Water Effect",
+      "titleCN": "水效果",
+      "site": "https://watereffect.net/",
+      "description": "让图片加上水，增添波纹倒影。",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
+    },
+    {
+      "name": "Water Effect",
+      "titleEN": "Water Effect",
+      "titleCN": "水效果",
+      "site": "https://watereffect.net/",
+      "description": "让图片加上水，增添波纹倒影。",
+      "image": "",
+      "labels": [
+        "游戏"
+      ]
+    },
+    {
+      "name": "The True Size",
+      "titleEN": "The True Size",
+      "titleCN": "世界地图真实大小",
+      "site": "https://www.thetruesize.com/",
+      "description": "在世界地图上对比各个国家的真实大小",
+      "image": "",
+      "labels": [
+        "地图"
+      ]
+    },
+    {
+      "name": "LKs网站推荐合集",
+      "titleEN": "LKs",
+      "titleCN": "LKs网站推荐合集",
+      "site": "https://lkssite.vip/",
+      "description": "LKs网站推荐合集。",
+      "image": "",
+      "labels": [
+        "合集"
       ]
     }
   ]

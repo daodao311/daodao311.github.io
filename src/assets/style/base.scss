@@ -17,7 +17,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: $--font-family-title, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -92,10 +92,6 @@ button:focus-visible {
 #app {
   width: 100vw;
   height: 100vh;
-  // max-width: 1280px;
-  // margin: 0 auto;
-  // padding: 2rem;
-  // text-align: center;
 }
 .ellipsis1 {
   display: -webkit-box;
@@ -103,6 +99,7 @@ button:focus-visible {
   -webkit-line-clamp: 1; /* 显示的行数 */
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-all;
 }
 .ellipsis2 {
   display: -webkit-box;
@@ -110,6 +107,7 @@ button:focus-visible {
   -webkit-line-clamp: 2; /* 显示的行数 */
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-all;
 }
 .ellipsis3 {
   display: -webkit-box;
@@ -117,6 +115,7 @@ button:focus-visible {
   -webkit-line-clamp: 3; /* 显示的行数 */
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 @media (prefers-color-scheme: light) {

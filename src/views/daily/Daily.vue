@@ -20,7 +20,7 @@ const sitesList = ref(sites.daily)
   justify-content: center;
   height: 16vmin;
   .title {
-    font-size: $--size-normal;
+    font-size: var(--size-normal);
     color: $--color-nature;
     font-family: $--font-family-title;
   }

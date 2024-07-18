@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createWebHistory, createRouter } from "vue-router"
+import { RouteRecordRaw, createWebHashHistory, createRouter } from "vue-router"
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,9 +16,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/ai/AI.vue") // AI
   },
   {
-    path: "/tool",
-    name: "Tool",
-    component: () => import("@/views/tool/Tool.vue") // Tool
+    path: "/work",
+    name: "Work",
+    component: () => import("@/views/work/Work.vue") // Work
+  },
+  {
+    path: "/daily",
+    name: "Daily",
+    component: () => import("@/views/daily/Daily.vue") // Fun
   },
   {
     path: "/fun",
@@ -28,7 +33,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(), // 路由类型
+  // 创建路由模式 history模式--createWebHistory 哈希模式--createWebHashHistory
+  history: createWebHashHistory(), // 路由类型
   routes // short for `routes: routes`
 })
 

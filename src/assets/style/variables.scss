@@ -30,7 +30,33 @@ $--font-family: ZCOOL Wenyi;
 $--font-family-title: ZCOOL Kuaile;
 $--font-family-special: ZCOOL Xiaowei Logo;
 
-$--size-mini: clamp(16px, 13.1830985915px + 0.1233802817vw, 20px);
-$--size-small: clamp(18px, 17.2957746479px + 0.1408450704vw, 24px);
-$--size-normal: clamp(26px, 15.4366197183px + 2.1126760563vw, 56px);
-$--size-large: clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+// 横屏
+$--size-mini: 1.4vw; // clamp(16px, 13.1830985915px + 0.1233802817vw, 20px);
+$--size-small: 1.6vw; // clamp(18px, 17.2957746479px + 0.1408450704vw, 24px);
+$--size-normal: 3vw; // clamp(26px, 15.4366197183px + 2.1126760563vw, 56px);
+$--size-large: 9.2vw; // clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+
+// 竖屏
+$--size-mini-mobile: 3vw; // clamp(16px, 13.1830985915px + 0.1233802817vw, 20px);
+$--size-small-mobile: 4vw; // clamp(18px, 17.2957746479px + 0.1408450704vw, 24px);
+$--size-normal-mobile: 7vw; // clamp(26px, 15.4366197183px + 2.1126760563vw, 56px);
+$--size-large-mobile: 12vw; // clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+
+// 横屏
+@media (orientation: landscape) {
+  :root {
+    --size-mini: #{$--size-mini};
+    --size-small: #{$--size-small};
+    --size-normal: #{$--size-normal};
+    --size-large: #{$--size-large};
+  }
+}
+// 竖屏
+@media (orientation: portrait) {
+  :root {
+    --size-mini: #{$--size-mini-mobile};
+    --size-small: #{$--size-small-mobile};
+    --size-normal: #{$--size-normal-mobile};
+    --size-large: #{$--size-large-mobile};
+  }
+}

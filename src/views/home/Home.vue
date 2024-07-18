@@ -13,9 +13,14 @@ const entryList = ref<Entry[]>([
     path: "/ai"
   },
   {
-    name: "工具",
-    label: "\xa0工\xa0具\xa0",
-    path: "/tool"
+    name: "办公",
+    label: "\xa0办\xa0公\xa0",
+    path: "/work"
+  },
+  {
+    name: "日常",
+    label: "\xa0日\xa0常\xa0",
+    path: "/daily"
   },
   {
     name: "图一乐",
@@ -72,12 +77,33 @@ const entryList = ref<Entry[]>([
     width: 80vw;
     li {
       padding: 8vh 4vw 0;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideInRight 1s forwards;
+      &:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.8s;
+      }
     }
   }
   &__item {
   }
 }
-@media (max-width: 1023px) {
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (orientation: portrait) {
   .head-links__details {
     flex-direction: column;
     justify-content: center;
@@ -109,7 +135,7 @@ const entryList = ref<Entry[]>([
       line-height: 100%;
       color: $--color-nature;
       border: none;
-      font-size: $--size-small;
+      font-size: var(--size-small);
       cursor: pointer;
       &:before {
         content: "";

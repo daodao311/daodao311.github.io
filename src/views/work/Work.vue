@@ -3,12 +3,12 @@ import { ref } from "vue"
 import sites from "@/assets/json/sites.json"
 import CardsList from "@/components/CardsList.vue"
 
-const sitesList = ref(sites.tool)
+const sitesList = ref(sites.work)
 </script>
 <template>
   <div class="ai">
     <div class="header">
-      <div class="title">工 具</div>
+      <div class="title">办 公</div>
     </div>
     <CardsList :sites="sitesList"></CardsList>
   </div>
@@ -20,7 +20,7 @@ const sitesList = ref(sites.tool)
   justify-content: center;
   height: 16vmin;
   .title {
-    font-size: $--size-normal;
+    font-size: var(--size-normal);
     color: $--color-nature;
     font-family: $--font-family-title;
   }

@@ -30,9 +30,9 @@ function handleJump(site) {
           <!-- <span>{{ site.description }}</span> -->
           <ul class="labels">
             <li v-for="(label, index) in site.labels" :key="index">
-              <span class="label">
+              <div class="label">
                 <span class="label-text">{{ label }}</span>
-              </span>
+              </div>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@ function handleJump(site) {
   display: flex;
   // justify-content: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 96vw;
   padding: 0 4vmin;
   .col {
     flex: 0 0 25%;
@@ -68,7 +68,7 @@ function handleJump(site) {
       }
       .title {
         font-weight: bold;
-        font-size: $--size-small;
+        font-size: var(--size-small);
       }
       .content {
         // flex: 1;
@@ -88,11 +88,11 @@ function handleJump(site) {
     padding: 0.2vmin 1vmin;
     background-color: $--color-primary-light;
     .label-text {
-      font-size: $--size-mini;
+      font-size: var(--size-mini);
     }
   }
 }
-@media (max-width: 1024px) {
+@media (orientation: portrait) {
   .row .col {
     flex: 0 0 50%;
     width: 50%;

@@ -460,6 +460,17 @@
       "labels": [
         "图片"
       ]
+    },
+    {
+      "name": "中国医药信息查询平台",
+      "titleEN": "China Medical Information Platform",
+      "titleCN": "中国医药信息查询平台",
+      "site": "https://www.dayi.org.cn/",
+      "description": "由三甲医院副主任医师以上专家编写的医药信息查询平台<",
+      "image": "",
+      "labels": [
+        "生活"
+      ]
     }
   ],
   "fun": [

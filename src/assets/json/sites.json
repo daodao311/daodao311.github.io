@@ -522,7 +522,7 @@
       "name": "tree.fm",
       "titleEN": "tree.fm",
       "titleCN": "森林之声",
-      "site": "https: //www.tree.fm/",
+      "site": "https://www.tree.fm/",
       "description": "",
       "image": "",
       "labels": [
@@ -582,18 +582,7 @@
       "description": "让图片加上水，增添波纹倒影。",
       "image": "",
       "labels": [
-        "游戏"
-      ]
-    },
-    {
-      "name": "Water Effect",
-      "titleEN": "Water Effect",
-      "titleCN": "水效果",
-      "site": "https://watereffect.net/",
-      "description": "让图片加上水，增添波纹倒影。",
-      "image": "",
-      "labels": [
-        "游戏"
+        "图片"
       ]
     },
     {

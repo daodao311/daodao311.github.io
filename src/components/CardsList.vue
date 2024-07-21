@@ -52,6 +52,21 @@ function handleJump(site) {
     flex: 0 0 25%;
     width: 25%;
     padding: 4vmin;
+    margin-bottom: 10vmin;
+    opacity: 0;
+    animation: slide-down 1s ease forwards;
+    &:nth-child(4n-3) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(4n-2) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(4n-1) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(4n) {
+      animation-delay: 0.8s;
+    }
     .card {
       display: flex;
       flex-direction: column;
@@ -77,6 +92,18 @@ function handleJump(site) {
     }
   }
 }
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    margin-bottom: 10vmin;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0;
+    transform: translateY(0);
+  }
+}
 .labels {
   display: flex;
   flex-direction: row-reverse;
@@ -96,6 +123,12 @@ function handleJump(site) {
   .row .col {
     flex: 0 0 50%;
     width: 50%;
+    &:nth-child(2n-1) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(2n) {
+      animation-delay: 0.4s;
+    }
     .card {
       // padding: 2vmin;
     }

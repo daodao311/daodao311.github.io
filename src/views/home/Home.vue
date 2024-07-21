@@ -79,7 +79,7 @@ const entryList = ref<Entry[]>([
       padding: 8vh 4vw 0;
       opacity: 0;
       transform: translateX(100%);
-      animation: slideInRight 1s forwards;
+      animation: slideInRight 1s ease forwards;
       &:nth-child(1) {
         animation-delay: 0.2s;
       }

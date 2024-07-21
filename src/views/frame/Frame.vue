@@ -40,7 +40,11 @@ function goBack() {
       <!-- <img src="@/assets/imgs/daodao.svg" class="daodao" alt="" /> -->
       <!-- <img src="@/assets/imgs/daodaos-toolbox.svg" class="daodao" alt="" /> -->
     </div>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
 </template>
 <style lang="scss" scoped>

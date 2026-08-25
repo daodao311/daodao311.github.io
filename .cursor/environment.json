@@ -1,0 +1,11 @@
+{
+  "name": "my-sharing (Vue 3 + Vite)",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "dev server",
+      "command": "npm run dev"
+    }
+  ],
+  "ports": [3111]
+}
